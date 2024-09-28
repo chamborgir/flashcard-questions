@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    font-family: 'Fredoka', sans-serif; /* Apply Fredoka font to the body */
+
+  }
+  .button-19 {
+    font-family: din-round, sans-serif; /* Keep the button's original font */
+  }
+
+  
+  .flashcard-container {
+    display: flex;
+    height: 50vh;
+    width: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    width: 250px;
+    height: 600px;
+    perspective: 1000px; /* Adds 3D perspective */
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s; /* Animation for the flip */
+    transform-style: preserve-3d; /* Ensures 3D flip effect */
+  }
+  
+  .card-front, .card-back {
+    width: 100%;  /* Ensures the text container fills the card */
+    height: 100%; /* Ensures the text container fills the card */
+    position: absolute; /* Positions the text layers on top of each other */
+    backface-visibility: hidden; /* Hides the back face when not visible */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center; /* Centers the text */
+    padding: 20px; /* Adds padding for better spacing */
+    font-size: 1.5rem; /* Sets the font size */
+    color: #333; /* Sets the text color */
+    background-color: #fff; /* Sets the background color of the card */
+    border-radius: 10px; /* Rounds the corners of the card */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
+  }
+  
+  /* Optional: You can also set a max-width to justify text when it's too long */
+  .card-front p, .card-back p {
+    margin: 0; /* Remove default margin */
+    width: 100%; /* Make sure the paragraph takes full width */
+    text-align: justify; /* Justifies the text */
+  }
+  
+  
+  .card-back {
+    transform: rotateY(180deg); /* Initial state of the back side */
+  }
+  
+  .flip .card-inner {
+    transform: rotateY(180deg); /* When flipped, rotate the card */
+  }
+  
+  .button-19 {
+    appearance: button;
+    background-color: #1899D6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin-top: 20px; /* Adds space above the button */
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .button-19:after {
+    background-clip: padding-box;
+    background-color: #1CB0F6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  
+  .button-19,
+  .button-19:focus {
+    user-select: auto;
+  }
+  
+  .button-19:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+  }
+  
+  .button-19:disabled {
+    cursor: auto;
+  }
+  
+  .button-19:active {
+    border-width: 4px 0 0;
+    background: none;
+  }
+
+
+  
